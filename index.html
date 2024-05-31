@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Equifidy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Exo:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="loading">
+        <div class="spinner"><div class="spinner1"></div></div>
+        <div class="loading-bar"></div>
+    </div>
+    <div id="content">
+        <nav id="navbar">
+            <div class="logo">
+                <a href="#"><img src="imgs/Image (28).png" width="100px" alt=""></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Why Blockchain</a></li>
+                <li><a href="#">Features</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Blog <i class="fa fa-angle-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">Our Blog</a>
+                        <a href="#">Blog Details</a>
+                    </div>
+                </li>
+                <li><a href="#">Contact</a></li>
+               <a href="login.html"><button class="login">LOGIN</button></a>
+            </ul>
+            
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <script>
+                const burger = document.querySelector('.burger');
+                const navLinks = document.querySelector('.nav-links');
+                const body = document.querySelector('body');
+                const backdrop = document.createElement('div');
+                backdrop.classList.add('menu-backdrop');
+            
+                body.appendChild(backdrop);
+            
+                burger.addEventListener('click', () => {
+                    navLinks.classList.toggle('nav-active');
+                    backdrop.classList.toggle('display'); // Show or hide the backdrop
+            
+                    // Toggle body scrolling
+                    body.classList.toggle('fixed-position');
+                    
+                    // Burger Animation
+                    burger.classList.toggle('toggle');
+                });
+            
+                backdrop.addEventListener('click', function() {
+                    navLinks.classList.remove('nav-active');
+                    this.classList.remove('display'); // Hide the backdrop when clicked
+                    body.classList.remove('fixed-position');
+                    burger.classList.remove('toggle');
+                });
+            </script>
+        </nav>
+        
+
+        <div class="video-container">
+            <video autoplay muted loop class="background-video">
+                <source src="imgs/Purple Neon Tech Gaming Youtube Intro_20240529_005108_0001.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay">
+                <div class="content">
+                    <span class="getui">GET BUSINESS SOLUTIONS</span>
+                    <h1>Bl<span><img src="imgs/bitcoin.png" alt=""></span>ckchain</h1>
+                    <br>
+                    <div class="container">
+                        <div class="text-box">
+                            <h1>Technology for Business</h1>
+                        </div>
+                        <div class="description">
+                            <p>We've worked with over 400 companies to build blockchain solutions for their business, and we are still growing.</p>
+                            <button class="cta-button">Get Started Today</button>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+        
+        <div class="investors">
+            <h2>Backed By Leading Blockchain Investors And Founders</h2>
+            <div class="marquee">
+                <div class="marquee-content">
+                    <img src="imgs/client-21.svg" alt="Coinbase">
+                    <img src="imgs/client-23.svg" alt="Coinbase">
+                    <img src="imgs/client-25.svg" alt="Mercury">
+                    <img src="imgs/client-21.svg" alt="Coinbase">
+                    <img src="imgs/client-23.svg" alt="Anchorage Digital">
+                    
+                </div>
+            </div>
+        </div>
+    
+        <section class="why-blockchain">
+            <h2>ABOUT BLOCKCHAIN</h2>
+            <h1>Why Blockchain?</h1>
+            <p>We've worked with over 400 companies to build blockchain solutions for their business, and we are still growing.</p>
+            <div class="features">
+                <div class="feature">
+                    <h3>Flexibility</h3>
+                    <p>We've worked with over 400 companies to build blockchain solutions for their business.</p>
+                    <ul>
+                        <li>Blockchain solutions for their business.</li>
+                        <li>Crypto space with its remarkable journey.</li>
+                        <li>Stay tuned to blockchain news.</li>
+                    </ul>
+                    <img src="imgs/feature-card-thumb-1.png" alt="Flexibility Image">
+                </div>
+                <div class="feature">
+                    <h3>Transference</h3>
+                    <p>We've worked with over 400 companies to build blockchain solutions for their business.</p>
+                    <p>We've worked with over 400 companies to build blockchain solutions for their business.</p>
+                    <img src="imgs/feature-card-thumb-2.png" alt="Transference Image">
+                </div>
+                <div class="feature">
+                    <h3>Secure & Safe</h3>
+                    <p>We've worked with over 400 companies to build blockchain solutions for their business.</p>
+                    <p>We've worked with over 400 companies to build blockchain solutions for their business.</p>
+                    <img src="imgs/feature-card-thumb-3.png" alt="Secure & Safe Image">
+                </div>
+            </div>
+        </section>
+
+        <div class="container2">
+            <div class="image-div">
+                <img src="imgs/intro_1-1.png" alt="Image">
+            </div>
+            <div class="text-div">
+                <h3>Features</h3><br>
+                <h1>Blockchain spreads Trust everywhere</h1><br>
+                <p>Our team has created blockchain solutions for over 400 companies, and we are still growing. From less paperwork and fewer disputes, to happier customers and entirely new business methods, a shared record of truth is invaluable.</p>
+                <br>
+                <span class="milli">63M</span>&nbsp;<span class="milli">24%</span><br>
+                <span class="milli2">people use Blockchain</span> <span class="milli2">of companies use Blockchain</span>
+            </div>
+        </div>
+    
+        <div class="possible">
+            <div class="container3">
+                <div class="text-div2">
+                    <h3>Possibilities</h3>
+                    <h1>What does it mean for Your business?</h1>
+                    <p>Our team has created blockchain solutions for over 400 companies, and we are still growing. From less paperwork and fewer disputes, to happier customers and entirely new business methods, a shared record of truth is invaluable.</p>
+                </div>
+                <div class="image-div2">
+                    <img src="imgs/bitcoin-img.png" width="100%" alt="Image">
+                </div>
+                
+            </div>
+    
+        </div>
+       
+        <div class="testcontt">
+            <h3 style="background: linear-gradient(to right, rgba(244,131,255,1) ,rgba(132,46,253,1) );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent; text-align: center;">TESTIMONIAL</h3>
+            <h1 style="color: white; text-align: center;">Over 400 companies have already Tried Blockchain</h1>
+            <br>
+            <div class="wrapper">
+                <div class="testimonial-container" id="testimonial-container"></div>
+                <button id="prev">&lt;</button>
+                <button id="next">&gt;</button>
+              </div>
+              <!-- Script -->
+              <script>
+                  //Testimonial Data
+          const testimonials = [
+            {
+              name: "Eva Sawyer",
+              job: "CEO, Fashworks",
+              image: "https://iko.themegenix.net/blockchain/wp-content/uploads/2024/04/testi_thumb3.png",
+              testimonial:
+                "I've tested numerous technologies, but this one is leaps and bounds ahead of the competition. It's phenomenal.",
+            },
+            {
+              name: "David Llyan",
+              job: "Developer, TechCrew",
+              image: "imgs/bitcoin.png",
+              testimonial:
+              "Blockchain technology has revolutionized the way we handle transactions. The security and transparency it provides are unmatched. We've seen incredible improvements in efficiency and trust within our network.",
+            },
+            {
+              name: "Jae Robin",
+              job: "UI Designer, Affinity Agency",
+              image: "https://i.postimg.cc/W4mnbjG9/profile-image-3.png",
+              testimonial:
+              "Implementing blockchain has streamlined our operations and significantly reduced costs. The decentralized nature of the system ensures reliability and security, which are crucial in today's digital age.",
+            },
+            {
+              name: "Nicola Blakely",
+              job: "CEO,Zeal Wheels",
+              image: "https://i.postimg.cc/xdLsJL23/profile-image-4.png",
+              testimonial:
+              "Blockchain has been a game-changer for our company. The technology's ability to provide a secure, transparent, and tamper-proof system has greatly enhanced our clients' trust and satisfaction.",
+            },
+          ];
+          
+          //Current Slide
+          let i = 0;
+          //Total Slides
+          let j = testimonials.length;
+          
+          let testimonialContainer = document.getElementById("testimonial-container");
+          let nextBtn = document.getElementById("next");
+          let prevBtn = document.getElementById("prev");
+          
+          nextBtn.addEventListener("click", () => {
+            i = (j + i + 1) % j;
+            displayTestimonial();
+          });
+          prevBtn.addEventListener("click", () => {
+            i = (j + i - 1) % j;
+            displayTestimonial();
+          });
+          
+          let displayTestimonial = () => {
+            testimonialContainer.innerHTML = `
+              <p>${testimonials[i].testimonial}</p>
+              <img src=${testimonials[i].image}>
+              <h3>${testimonials[i].name}</h3>
+              <h6>${testimonials[i].job}</h6>
+            `;
+          };
+          window.onload = displayTestimonial;
+              </script>
+        </div>
+        
+       <div class="accordioncont">
+        <div class="faqcontainer">
+            <h2 class="text-center text-uppercase mb-4">Frequently Asked Questions</h2>
+            <h3 class="text-center mb-5">Popular questions about Blockchain</h3>
+            <p class="text-center mb-5">We've worked with over 400 companies to build blockchain solutions for their business, and we are still growing.</p>
+    
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-button">
+                        What is blockchain technology?
+                        <span class="accordion-arrow">&#x2193;</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>It's very simple! Register here. In your personal account, create a wallet where you can store your FOX tokens. Then just send any amount to the displayed address in your office.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">
+                        What is the value of FOX tokens?
+                        <span class="accordion-arrow">&#x2193;</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>The value of FOX tokens varies based on market conditions and demand. Please check the current exchange rate on our platform.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">
+                        What is Bitcoin?
+                        <span class="accordion-arrow">&#x2193;</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Bitcoin is a decentralized digital currency that you can buy, sell and exchange directly, without an intermediary like a bank.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">
+                        What is cryptocurrency?
+                        <span class="accordion-arrow">&#x2193;</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Cryptocurrency is a type of digital or virtual currency that uses cryptography for security and operates independently of a central authority.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">
+                        How does cryptocurrency work?
+                        <span class="accordion-arrow">&#x2193;</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Cryptocurrencies work using a technology called blockchain. Blockchain is a decentralized technology spread across many computers that manage and record transactions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const accordionButtons = document.querySelectorAll('.accordion-button');
+    
+                accordionButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const isActive = button.classList.contains('active');
+                        closeAllAccordions();
+                        if (!isActive) {
+                            button.classList.add('active');
+                            const content = button.nextElementSibling;
+                            content.style.maxHeight = content.scrollHeight + "px";
+                            content.style.paddingTop = "15px";
+                            content.style.paddingBottom = "15px";
+                        }
+                    });
+                });
+    
+                function closeAllAccordions() {
+                    accordionButtons.forEach(button => {
+                        button.classList.remove('active');
+                        const content = button.nextElementSibling;
+                        content.style.maxHeight = 0;
+                        content.style.paddingTop = 0;
+                        content.style.paddingBottom = 0;
+                    });
+                }
+            });
+        </script>
+       </div>
+
+       <div class="possible">
+        <div class="container3">
+            <div class="text-div2">
+                <h1>Become a part of the future</h1>
+                <p>Our team has created blockchain solutions for over 400 companies, and we are still growing. From less paperwork and fewer disputes, to happier customers and entirely new business methods, a shared record of truth is invaluable.</p>
+            </div>
+            <div class="image-div2">
+                <img src="imgs/cta.png" width="100%" alt="Image">
+            </div>
+            
+        </div>
+
+    </div>
+       
+    <div class="footer">
+        <div>
+            <img src="imgs/Image (28).png" width="50%" alt="IKO Logo">
+            <p>Equifidy is a cutting-edge blockchain technology company at the forefront of innovation in the decentralized ledger space. Established in 2024.</p>
+            <div class="social-media">
+                <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                <a href="#" aria-label="Telegram"><i class="fa fa-telegram"></i></a>
+            </div>
+        </div>
+        <div>
+            <h3>CONTACT US</h3>
+            <p>202 Helga Springs Rd, Crawford, TN 38554</p>
+            <p>Call Us: 800.275.8777</p>
+            <p>Email: iko@company.com</p>
+        </div>
+        <div>
+            <h3>SIGN UP FOR EMAIL UPDATES</h3>
+            <p>Sign up with your email address to receive news and updates.</p>
+            <form action="#" method="post">
+                <input type="email" placeholder="Your Email Address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <!-- Font Awesome for social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <script>
+        // scripts.js
+    document.addEventListener("DOMContentLoaded", function() {
+    var loading = document.getElementById('loading');
+    var content = document.getElementById('content');
+    
+    // Simulate a loading delay of 3 seconds
+    setTimeout(function() {
+        // Hide the loading screen
+        loading.style.display = 'none';
+        
+        // Show the main content
+        content.style.display = 'block';
+    }, 5000); // 3000 milliseconds = 5 seconds
+    });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('#content div');
+        
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+        
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+            </script>
+<script src="https://kit.fontawesome.com/a7cbe35a69.js" crossorigin="anonymous"></script>
+</body>
+</html>
